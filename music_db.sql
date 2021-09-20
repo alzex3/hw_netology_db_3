@@ -6,8 +6,7 @@ CREATE TABLE artist (
 CREATE TABLE album (
     album_id     SERIAL      PRIMARY KEY,
     title        VARCHAR(40) NOT NULL,
-    release_year INTEGER     NOT NULL CHECK(release_year > 1900),
-    artist_id    INTEGER     REFERENCES artist(artist_id)
+    release_year INTEGER     NOT NULL CHECK(release_year > 1900)
 );
 
 CREATE TABLE artist_album (
